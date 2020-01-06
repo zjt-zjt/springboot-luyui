@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+  <link  rel="stylesheet" href="/static/layui/css/layui.css">
+    <script type="text/javascript" src="/static/layui/layui.js"></script>
+
+
+</head>
+
+
+
+
+<body>
+
+<table id="user_table"></table>
+
+
+
+</body>
+
+<script>
+    layui.use("table",function () {
+     var table   =    layui.table;
+
+
+        table.render({
+            elem: '#user_table'
+            ,url:'/user/'
+            ,height: 'full-20' //高度最大化减去差值
+            ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,page: true
+            ,cols: [[
+                {field:'userId', width:80, title: 'ID', sort: true}
+                ,{field:'username', width:80, title: '用户名'}
+                ,{field:'password', title: '密码', width: '30%', minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                ,{field:'email', title: '邮箱', sort: true}
+                ,{field:'createTime', width:137, title: '注册时间', sort: true}
+            ]]
+        });
+
+
+    })
+
+
+</script>
+
+</html>

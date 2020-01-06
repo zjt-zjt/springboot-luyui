@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    username: root
+    password: zjtzjy137381
+    url: jdbc:mysql://localhost:3306/upms?serverTimezone=Asia/Shanghai&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    static-path-pattern: /static/**
+
+  resources:
+    static-locations: classpath:/static/,classpath:/templates/
+
+  jackson:
+    date-format:  yyyy年MM月dd日 HH点mm分ss秒
